@@ -19,6 +19,7 @@ Just clone this repository.
 ### 1. Change `classes` with your own dataset.  
 In `main.py`, there is a code that declare the classes. You will change this with your `obj.names`.  
 Already changed for 12 classes Milestone dataset:
+
 classes = [
     "Bicycle",
     "Motorcycle",
@@ -34,7 +35,6 @@ classes = [
     "Heavy_Duty_Vehicle"
 ]
 
-<p align="center"><img src="https://user-images.githubusercontent.com/41863759/100314803-cfd36800-2ffa-11eb-90ed-bf821ba2de4f.png" width="400px"></p>  
 
 ### 2. Prepare COCO annotation file from multiple YOLO annotation files.
 #### 2a. Image and annotation files are in different directories 
@@ -53,8 +53,7 @@ You don't need to specify `yolo-subdir` argument.
 - `python main.py --path_images <Absolute path to dataset_root_dir_images> --path_annotations <Absolute path to dataset_root_dir_annotations> --output <Name of the json file>`  
 - (For example)`python main.py --path_images /..../Milestone/images/train --path_images /..../Milestone/labels/train --output /..../Milestone/annotations/train.json`
 
-Run for train,val amd test subsets
-
+#### 2b. Run for train,val and test subsets
 Initial format Miletsone dataset structure
 <pre>
     dataset_root_dir/
