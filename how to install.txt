@@ -1,5 +1,0 @@
-python main.py --path_images /home/agm2/Desktop/MLEvaluacion/Milestone_dataset_big/images/train/ --path_annotations /home/agm2/Desktop/MLEvaluacion/Milestone_dataset_big/labels/train/ --output /home/agm2/Desktop/MLEvaluacion/Milestone_dataset_big_coco_bis/annotations/train.json
-
-python main.py --path_images /home/agm2/Desktop/MLEvaluacion/Milestone_dataset_big/images/val/ --path_annotations /home/agm2/Desktop/MLEvaluacion/Milestone_dataset_big/labels/val/ --output /home/agm2/Desktop/MLEvaluacion/Milestone_dataset_big_coco_bis/annotations/val.json
-
-python main.py --path_images /home/agm2/Desktop/MLEvaluacion/Milestone_dataset_big/images/test/ --path_annotations /home/agm2/Desktop/MLEvaluacion/Milestone_dataset_big/labels/test/ --output /home/agm2/Desktop/MLEvaluacion/Milestone_dataset_big_coco_bis/annotations/test.json
