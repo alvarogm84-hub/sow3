@@ -27,3 +27,5 @@ from .imagenet_template import template_meta
 from .o365_ovd import register_objects365_ovd_instances
 from .custom_ovd import register_custom_ovd_instances
 from .utils import clean_caption, clean_words_or_phrase
+
+from .milestone_big_ovd import register_milestone_big_ovd_instances
