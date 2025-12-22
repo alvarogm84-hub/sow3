@@ -13,7 +13,7 @@ You can make same environment with anaconda environment.
 - `pip install imagesize`  
 
 Just clone this repository.  
-- `git clone https://github.com/Taeyoung96/Yolo-to-COCO-format-converter.git`  
+- `git clone https://github.com/alvarogm84-hub/sow3.git`  
 - `cd Yolo-to-COCO-format-converter`  
 
 ### It will be easy to understand if you refer to the tutorial folder.  
