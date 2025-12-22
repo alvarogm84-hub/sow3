@@ -37,7 +37,7 @@ classes = [
 
 
 ### 2. Prepare COCO annotation file from multiple YOLO annotation files.
-#### 2a. Image and annotation files are in different directories 
+#### Image and annotation files are in different directories 
 Use this approach if your training data file structure looks like this:
 <pre>
     dataset_root_dir_images/
@@ -50,11 +50,12 @@ Use this approach if your training data file structure looks like this:
 
 You don't need to specify `yolo-subdir` argument.  
 
-- `python main.py --path_images <Absolute path to dataset_root_dir_images> --path_annotations <Absolute path to dataset_root_dir_annotations> --output <Name of the json file>`  
-- (For example)`python main.py --path_images /..../Milestone/images/train --path_images /..../Milestone/labels/train --output /..../Milestone/annotations/train.json`
 
-#### 2b. Run for train,val and test subsets
-Initial format Miletsone dataset structure
+### 3. Run for train, val and test subsets
+- `python main.py --path_images <Absolute path to dataset_root_dir_images> --path_annotations <Absolute path to dataset_root_dir_annotations> --output <Name of the json file>`  
+- (For example train subset)`python main.py --path_images /..../Milestone/images/train --path_images /..../Milestone/labels/train --output /..../Milestone/annotations/train.json`
+
+#### 3a Initial format Miletsone dataset structure
 <pre>
     dataset_root_dir/
         images/
@@ -79,7 +80,7 @@ Initial format Miletsone dataset structure
                 Photo_00002.txt
 </pre>
 
-COCO format Miletsone dataset structure
+#### 3b COCO format Miletsone dataset structure
 <pre>
     dataset_root_dir/
         annotations/
