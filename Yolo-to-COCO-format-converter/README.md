@@ -1,22 +1,5 @@
 # Yolo-to-COCO-format-converter
 
-When you use **Yolo-model**, you might create annotation labels with [Yolo-mark](https://github.com/AlexeyAB/Yolo_mark).  
-For example,  
-- `obj.names` - example of list with object names  
-- `train.txt` - example with list of image filenames for training Yolo model  
-- `train/` - example of folder that contain images and labels
-> - *.jpg : example of list of image  
-> - *.txt : example of list of label  
-
-**But, when you want to use another model(ex. efficientdet), you need another annotation format! :disappointed_relieved:**  
-### This code will help you make a COCO format annotations with Yolo format!  
-
-### Updates  
-- Oct 13th, 2021 - We could support not only **`Yolo-mark`** outputs, but also **`OpenLabeling`** outputs!  
-                Also, We could make segmentation mask polygons information in json file.  
-                Thanks to [@NauchtanRobotics](https://github.com/NauchtanRobotics)!  
-       
-
 ## How to use
 ### Requirements
 - numpy
