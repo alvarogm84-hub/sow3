@@ -64,7 +64,7 @@ And put it on "inits/ovdino directory"
 
 ### 4. Fine-Tuning
 #### Fine-Tuning on Custom Dataset (Milestone Dataset)
-(Example) python ./tools/train_net.py --config-file /..../OV-DINO-main/ovdino/projects/ovdino/configs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep.py --resume train.init_checkpoint=/..../OV-DINO-main/inits/ovdino/ovdino_swint_og-coco50.6_lvismv39.4_lvis32.2.pth train.output_dir=/..../OV-DINO-main/wkdrs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24epbis dataloader.evaluator.output_dir="/..../OV-DINO-main/wkdrs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24epbis/eval_milestone_big_2025mmdd-HHMMSS" 
+(Example) python ./tools/train_net.py --config-file /..../OV-DINO-main/ovdino/projects/ovdino/configs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep.py --resume train.init_checkpoint=/..../OV-DINO-main/inits/ovdino/ovdino_swint_og-coco50.6_lvismv39.4_lvis32.2.pth train.output_dir=/..../OV-DINO-main/wkdrs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep dataloader.evaluator.output_dir="/..../OV-DINO-main/wkdrs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep/eval_milestone_big_2025mmdd-HHMMSS" 
 
 
 ### 5. Evaluate Fine-Tuning model
