@@ -59,17 +59,11 @@ Follow Yolo-to-COCO-format-converter instructions in order to prepare Milestone 
   ```
 ### 3. Evaluation
 Download model: https://huggingface.co/hao9610/OV-DINO/resolve/main/ovdino_swint_og-#coco50.6_lvismv39.4_lvis32.2.pth
-And put it on inits/ovdino directory
+
+And put it on "inits/ovdino directory"
 
 ### 4. Fine-Tuning
 #### Fine-Tuning on Custom Dataset (Milestone Dataset)
-```bash
-cd $root_dir/ovdino
-bash scripts/finetune.sh \
-  projects/ovdino/configs/ovdino_swin_tiny224_bert_base_ft_coco_24ep.py \
-  ../inits/ovdino/ovdino_swint_og-coco50.6_lvismv39.4_lvis32.2.pth
-```
-
 (Example) python ./tools/train_net.py --config-file /..../OV-DINO-main/ovdino/projects/ovdino/configs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep.py --resume train.init_checkpoint=/..../OV-DINO-main/inits/ovdino/ovdino_swint_og-coco50.6_lvismv39.4_lvis32.2.pth train.output_dir=/..../OV-DINO-main/wkdrs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24epbis dataloader.evaluator.output_dir="/..../OV-DINO-main/wkdrs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24epbis/eval_milestone_big_2025mmdd-HHMMSS" 
 
 
