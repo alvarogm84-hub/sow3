@@ -49,6 +49,7 @@ pip install "numpy<1.25"
 #### Milestone
 Follow Yolo-to-COCO-format-converter instructions in order to prepare Milestone dataset in the COCO format:
 ```
+OV-DINO
 ├── datas
 │   ├── milestone
 │   │   ├── annotations
