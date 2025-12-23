@@ -27,7 +27,7 @@ cd OV-DINO
 export root_dir=$(realpath ./)
 cd $root_dir/ovdino
 
-# Optional: set CUDA_HOME for cuda11.6.
+# Set CUDA_HOME for cuda11.6.
 # OV-DINO utilizes the cuda11.6 default, if your cuda is not cuda11.6, you need first export CUDA_HOME env manually.
 export CUDA_HOME="your_cuda11.6_path"
 export PATH=$CUDA_HOME/bin:$PATH
@@ -47,7 +47,7 @@ pip install "numpy<1.25"
 
 ### 3. Data Preparing
 #### Milestone
-Follow Yolo-to-COCO-format-converter instructions in order to prepare Milestone dataset in the COCO format:
+Follow the YOLO-to-COCO format converter instructions to prepare the Milestone dataset in COCO format:
 
 ── milestone
   ── annotations
@@ -55,26 +55,28 @@ Follow Yolo-to-COCO-format-converter instructions in order to prepare Milestone 
   ── val
   ── test
 
-#### Set routes (train/val/test) to Milestone dataset in
+#### Set dataset paths (train/val/test) in:
 -OV-DINO-main/ovdino/configs/common/data/milestone_big_ovd.py
 
-#### Modify the batch size accordding to GPU capabilities in
+#### Modify the batch size according to GPU capabilities in:
 -OV-DINO-main/ovdino/projects/ovdino/configs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep.py
 # dataloader.train.total_batch_size = 4 (64/32/16/8/4)
 
 #### Pretrained Model 
-Download model: https://huggingface.co/hao9610/OV-DINO/resolve/main/ovdino_swint_og-#coco50.6_lvismv39.4_lvis32.2.pth
+Download the pretrained model: https://huggingface.co/hao9610/OV-DINO/resolve/main/ovdino_swint_og-#coco50.6_lvismv39.4_lvis32.2.pth
 
-And put it on "inits/ovdino directory"
+Place it in: "inits/ovdino directory"
 
 ### 4. Fine-Tuning
 #### Fine-Tuning on Custom Dataset (Milestone Dataset)
-(Example) python ./tools/train_net.py --config-file /..../OV-DINO-main/ovdino/projects/ovdino/configs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep.py --resume train.init_checkpoint=/..../OV-DINO-main/inits/ovdino/ovdino_swint_og-coco50.6_lvismv39.4_lvis32.2.pth train.output_dir=/..../OV-DINO-main/wkdrs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep dataloader.evaluator.output_dir="/..../OV-DINO-main/wkdrs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep/eval_milestone_big_2025mmdd-HHMMSS" 
+Example command:
+python ./tools/train_net.py --config-file /..../OV-DINO-main/ovdino/projects/ovdino/configs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep.py --resume train.init_checkpoint=/..../OV-DINO-main/inits/ovdino/ovdino_swint_og-coco50.6_lvismv39.4_lvis32.2.pth train.output_dir=/..../OV-DINO-main/wkdrs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep dataloader.evaluator.output_dir="/..../OV-DINO-main/wkdrs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep/eval_milestone_big_2025mmdd-HHMMSS" 
 
 
 ### 5. Evaluate Fine-Tuning model
-Chose the best validation model accoring the log results, (eg:model_0009999.pth)
+Choose the best validation checkpoint according to the training logs (e.g., model_0009999.pth).
 
-(Example) python ./tools/train_net.py --config-file /..../OV-DINO-main/ovdino/projects/ovdino/configs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep.py --eval-only --resume train.init_checkpoint=/..../OV-DINO-main/wkdrs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep/model_0009999.pth train.output_dir=/..../OV-DINO-main/wkdrs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep dataloader.evaluator.output_dir="/..../OV-DINO-main/wkdrs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep/eval_milestone_big_2025mmdd-HHMMSS" 
+Example command:
+python ./tools/train_net.py --config-file /..../OV-DINO-main/ovdino/projects/ovdino/configs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep.py --eval-only --resume train.init_checkpoint=/..../OV-DINO-main/wkdrs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep/model_0009999.pth train.output_dir=/..../OV-DINO-main/wkdrs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep dataloader.evaluator.output_dir="/..../OV-DINO-main/wkdrs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep/eval_milestone_big_2025mmdd-HHMMSS" 
 
 
