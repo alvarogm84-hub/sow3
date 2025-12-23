@@ -2,34 +2,27 @@
 ### 1. Project Structure
 ```
 OV-DINO
+├── configs
 ├── datas
 │   ├── milestone
 │   │   ├── annotations
 │   │   ├── train
 │   │   ├── val
 │   │   └── test
+├── demo
+├── detectron2-717ab9
+├── detrex
 ├── docs
 ├── inits
-│   ├── huggingface
-│   ├── ovdino
-│   ├── sam2
-│   └── swin
 ├── ovdino
-│   ├── configs
-│   ├── demo
-│   ├── detrex
-│   ├── projects
-│   ├── scripts
-│   └── tools
 ├── wkdrs
-│   ├── ...
-│
+
 ```
 
 ### 2. Installation
 ```bash
 # clone this project
-git clone https://github.com/wanghao9610/OV-DINO.git
+git clone thttps://github.com/alvarogm84-hub/sow3.git
 cd OV-DINO
 export root_dir=$(realpath ./)
 cd $root_dir/ovdino
@@ -52,12 +45,25 @@ pip install -e ./
 pip uninstall -y numpy
 pip install "numpy<1.25"
 
-### 2. Data Preparing
+### 3. Data Preparing
 #### Milestone
-Follow Yolo-to-COCO-format-converter instructions in order to prepare Milestone dataset in the COCO format
+Follow Yolo-to-COCO-format-converter instructions in order to prepare Milestone dataset in the COCO format:
+```
+├── datas
+│   ├── milestone
+│   │   ├── annotations
+│   │   ├── train
+│   │   ├── val
+│   │   └── test
+```
+#### Set routes (train/val/test) to Milestone dataset in
+-OV-DINO-main/ovdino/configs/common/data/milestone_big_ovd.py
 
-  ```
-### 3. Evaluation
+#### Modify the batch size accordding to GPU capabilities in
+-OV-DINO-main/ovdino/projects/ovdino/configs/ovdino_swin_tiny224_bert_base_ft_milestone_big_24ep.py
+# dataloader.train.total_batch_size = 4 (64/32/16/8/4)
+
+#### Pretrained Model 
 Download model: https://huggingface.co/hao9610/OV-DINO/resolve/main/ovdino_swint_og-#coco50.6_lvismv39.4_lvis32.2.pth
 
 And put it on "inits/ovdino directory"
