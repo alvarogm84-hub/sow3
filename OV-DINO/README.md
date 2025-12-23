@@ -48,25 +48,12 @@ pip install "numpy<1.25"
 ### 3. Data Preparing
 #### Milestone
 Follow Yolo-to-COCO-format-converter instructions in order to prepare Milestone dataset in the COCO format:
-### 1. Project Structure
-```
-OV-DINO
-├── configs
-├── datas
-│   ├── milestone
-│   │   ├── annotations
-│   │   ├── train
-│   │   ├── val
-│   │   └── test
-├── demo
-├── detectron2-717ab9
-├── detrex
-├── docs
-├── inits
-├── ovdino
-├── wkdrs
 
-```
+── milestone
+  ── annotations
+  ── train
+  ── val
+  ── test
 
 #### Set routes (train/val/test) to Milestone dataset in
 -OV-DINO-main/ovdino/configs/common/data/milestone_big_ovd.py
