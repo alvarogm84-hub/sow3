@@ -48,9 +48,6 @@ Use this approach if your training data file structure looks like this:
         Photo_00002.txt
 </pre>
 
-You don't need to specify `yolo-subdir` argument.  
-
-
 ### 3. Run for train, val and test subsets
 - `python main.py --path_images <Absolute path to dataset_root_dir_images> --path_annotations <Absolute path to dataset_root_dir_annotations> --output <Name of the json file>`  
 - (For example train subset)`python main.py --path_images /..../Milestone/images/train --path_images /..../Milestone/labels/train --output /..../Milestone/annotations/train.json`
