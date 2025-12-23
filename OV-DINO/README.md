@@ -56,6 +56,7 @@ OV-DINO
 │   │   ├── train
 │   │   ├── val
 │   │   └── test
+
 ```
 #### Set routes (train/val/test) to Milestone dataset in
 -OV-DINO-main/ovdino/configs/common/data/milestone_big_ovd.py
