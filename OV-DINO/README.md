@@ -39,7 +39,6 @@ conda create -n ovdino -y
 conda activate ovdino
 pip install torch==1.13.1+cu116 torchvision==0.14.1+cu116 torchaudio==0.13.1 --index-url https://download.pytorch.org/whl/cu116
 conda install gcc=9 gxx=9 -c conda-forge -y
-# install gcc9
 python -m pip install -e detectron2-717ab9
 pip install -e ./
 
